@@ -1,3 +1,5 @@
+import { TokenId } from 'snarky/parties-leaves-json';
+
 export {
   Field,
   Bool,
@@ -752,6 +754,8 @@ declare class Ledger {
     privateKey: { s: Scalar },
     i: number
   ): string;
+
+  static customTokenID(publicKey: { g: Group }): string;
 
   static publicKeyToString(publicKey: { g: Group }): string;
   static publicKeyOfString(publicKeyBase58: string): Group;
