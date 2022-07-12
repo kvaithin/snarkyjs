@@ -340,8 +340,8 @@ class SmartContract {
     return this.self.network;
   }
 
-  get token() {
-    return this.self.token;
+  token(tokenId?: string) {
+    return this.self.token(tokenId);
   }
 
   get balance() {
